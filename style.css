@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    text-decoration: none;
+    position: fixed;
+    top: 0;
+    left:0;
+    padding: 20px 10%;
+    width: 100%;
+    background: transparent;
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+}
+
+.navbar a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover, .navbar a.active{
+    color:rgb(55, 230, 172)
+}

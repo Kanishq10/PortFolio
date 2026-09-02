@@ -2,46 +2,164 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Portfolio of Kanishq, a Full Stack and RPA Developer building reliable web applications and intelligent automation.">
+    <title>Kanishq | Full Stack & RPA Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- Basic Icons -->
     <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
-    <!-- Filled Icons -->
     <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
-    <!-- Brand Icons -->
     <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-        <nav class="navbar">
-            <a href="#" class="active">Home</a>
-            <a href="#">About</a>
-            <a href="#">Skills</a>
-            <a href="#">Contact</a>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="top">
+        <a class="brand" href="#home" aria-label="Kanishq home">K<span>.</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a class="nav-link is-active" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-button theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme">
+                <i class="bx bx-sun" aria-hidden="true"></i>
+            </button>
+            <button class="icon-button menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" title="Open navigation menu">
+                <i class="bx bx-menu" aria-hidden="true"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-    <section class="home">
-        <div class="home-content">
-            <h3>Hello I am</h3>
-            <h1>Kanishq</h1>
-            <h3>And I'am a <span>FullStack Developer</span></h3>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi quia natus expedita eos adipisci ut
-                rerum incidunt ipsam provident, cum sequi dolore eum aperiam accusantium officia dolorem placeat
-                deserunt! Cumque.
-            </p>
-            <div class="social-media"></div>
-            <div class="social-media"></div>
-            <div class="social-media"></div>
-            <div class="social-media"></div>
-            <div class="social-media"></div>
-        </div>
-    </section>
+
+    <main id="main-content">
+        <section class="hero section" id="home" aria-labelledby="hero-title">
+            <div class="hero-copy reveal">
+                <p class="eyebrow"><span></span> Available for meaningful work</p>
+                <h1 id="hero-title">Kanishq<br><em>Sharma.</em></h1>
+                <p class="hero-role">Full Stack Developer <span>|</span> RPA Developer</p>
+                <p class="hero-summary">I build dependable web applications and intelligent automation that turn complex operational work into clear, measurable results.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">View selected work <i class="bx bx-arrow-up-right-stroke" aria-hidden="true"></i></a>
+                    <a class="button button-quiet" href="#contact">Let's talk <i class="bx bx-arrow-right-stroke" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="hero-panel reveal" aria-label="Developer profile">
+                <div class="signal signal-one"></div>
+                <div class="signal signal-two"></div>
+                <p class="panel-label">System status</p>
+                <p class="panel-status"><span></span> Building</p>
+                <div class="hero-monogram" aria-hidden="true">KS</div>
+                <dl class="hero-facts">
+                    <div><dt>Based in</dt><dd>India</dd></div>
+                    <div><dt>Focus</dt><dd>Web + Automation</dd></div>
+                    <div><dt>Stack</dt><dd>Java / JS / Python</dd></div>
+                </dl>
+            </div>
+            <a class="scroll-prompt" href="#about" aria-label="Scroll to about section">Scroll to explore <i class="bx bx-arrow-down-stroke" aria-hidden="true"></i></a>
+        </section>
+
+        <section class="about section section-lined" id="about" aria-labelledby="about-title">
+            <div class="section-label reveal"><span>01</span> About</div>
+            <div class="about-content reveal">
+                <h2 id="about-title">Engineering useful systems, not just screens.</h2>
+                <div class="about-text">
+                    <p>I'm a Full Stack and RPA Developer with experience building scalable web applications, aviation-domain systems, and automation that removes repetitive operational work.</p>
+                    <p>My foundation in Java and data structures pairs with practical work across React.js, Node.js, Python, Playwright, REST APIs, MSSQL, Docker, and CI/CD. I care about software that stays clean, maintainable, and ready for real teams to use.</p>
+                    <a class="text-link" href="#contact">Work with me <i class="bx bx-arrow-up-right-stroke" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills" aria-labelledby="skills-title">
+            <div class="section-heading reveal">
+                <div class="section-label"><span>02</span> Capabilities</div>
+                <h2 id="skills-title">The tools behind the output.</h2>
+            </div>
+            <div class="skill-grid">
+                <article class="skill-group reveal">
+                    <p class="skill-number">01</p>
+                    <h3>Build</h3>
+                    <p>Interfaces and services designed for clarity, performance, and scale.</p>
+                    <ul><li>React.js</li><li>Next.js</li><li>Node.js</li><li>JavaScript</li><li>Java</li></ul>
+                </article>
+                <article class="skill-group reveal">
+                    <p class="skill-number">02</p>
+                    <h3>Automate</h3>
+                    <p>Reliable workflows that reduce manual work and surface the right information.</p>
+                    <ul><li>Python</li><li>Playwright</li><li>Puppeteer</li><li>REST APIs</li><li>MSSQL</li></ul>
+                </article>
+                <article class="skill-group reveal">
+                    <p class="skill-number">03</p>
+                    <h3>Ship</h3>
+                    <p>Collaborative, traceable engineering from local development to production.</p>
+                    <ul><li>Git & GitHub</li><li>Docker</li><li>CI/CD</li><li>Jira</li><li>Agile</li></ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="projects section section-lined" id="projects" aria-labelledby="projects-title">
+            <div class="section-heading reveal">
+                <div class="section-label"><span>03</span> Selected work</div>
+                <h2 id="projects-title">Things I've made solve real problems.</h2>
+            </div>
+            <div class="project-grid" id="project-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="process section" aria-labelledby="process-title">
+            <div class="section-label reveal"><span>04</span> Working style</div>
+            <div class="process-content reveal">
+                <h2 id="process-title">A practical approach to complex work.</h2>
+                <ol class="process-list">
+                    <li><span>01</span><div><h3>Understand</h3><p>Map the actual workflow, constraints, and outcome before choosing the technology.</p></div></li>
+                    <li><span>02</span><div><h3>Construct</h3><p>Build in focused increments, keeping the code understandable and testable.</p></div></li>
+                    <li><span>03</span><div><h3>Improve</h3><p>Measure the result, remove friction, and leave a system people can maintain.</p></div></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="contact section section-lined" id="contact" aria-labelledby="contact-title">
+            <div class="contact-intro reveal">
+                <div class="section-label"><span>05</span> Contact</div>
+                <h2 id="contact-title">Have a useful problem to solve?</h2>
+                <p>Send a note. The form opens your email app with everything ready to go.</p>
+                <div class="social-links" aria-label="Social links">
+                    <a data-profile-link="linkedin" href="https://www.linkedin.com/in/kanishq-sharma-9b49661bb/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="bxl bx-linkedin" aria-hidden="true"></i></a>
+                    <a data-profile-link="github" href="#" aria-label="GitHub (coming soon)" title="GitHub coming soon"><i class="bxl bx-github" aria-hidden="true"></i></a>
+                    <a data-profile-link="instagram" href="#" aria-label="Instagram (coming soon)" title="Instagram coming soon"><i class="bxl bx-instagram" aria-hidden="true"></i></a>
+                    <a data-profile-link="leetcode" href="#" aria-label="LeetCode (coming soon)" title="LeetCode coming soon"><i class="bx bx-code-alt" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <form class="contact-form reveal" id="contact-form">
+                <div class="form-row">
+                    <label for="name">Name<input id="name" name="name" type="text" autocomplete="name" required></label>
+                    <label for="email">Email<input id="email" name="email" type="email" autocomplete="email" required></label>
+                </div>
+                <label for="subject">Subject<input id="subject" name="subject" type="text" required></label>
+                <label for="message">Message<textarea id="message" name="message" rows="5" required></textarea></label>
+                <button class="button button-primary" type="submit">Compose email <i class="bx bx-send" aria-hidden="true"></i></button>
+                <p class="form-message" id="form-message" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="#home" aria-label="Back to top">K<span>.</span></a>
+        <p>Designed and built by Kanishq. <span id="year"></span></p>
+        <a class="back-top" href="#top">Back to top <i class="bx bx-arrow-up-stroke" aria-hidden="true"></i></a>
+    </footer>
 </body>
 
 </html>

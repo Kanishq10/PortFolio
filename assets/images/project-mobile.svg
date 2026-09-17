@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480">
+  <title>Hand-drawn mobile application screen</title>
+  <rect width="720" height="480" fill="#f3f1eb"/>
+  <path d="M260 57c0-12 9-21 21-21h158c12 0 21 9 21 21v350c0 12-9 21-21 21H281c-12 0-21-9-21-21z" fill="#fffdf8" stroke="#171717" stroke-width="5"/>
+  <path d="M282 93h156v243H282zM337 72h27" fill="none" stroke="#171717" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="360" cy="366" r="11" fill="none" stroke="#171717" stroke-width="4"/>
+  <path d="M308 143h104m-104 32h69m-69 81 25-29 23 18 44-53m-92 89h111" fill="none" stroke="#b86650" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="175" y="444" fill="#171717" font-family="monospace" font-size="20" letter-spacing="3">SMALL SCREEN / BIG PRACTICE</text>
+</svg>

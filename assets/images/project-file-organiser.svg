@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480">
+  <title>Hand-drawn folders for a file organiser</title>
+  <rect width="720" height="480" fill="#f3f1eb"/>
+  <path d="M106 145c0-12 8-20 20-20h119l32 31h317c13 0 22 9 22 22v177c0 13-9 22-22 22H127c-13 0-21-9-21-22z" fill="#fffdf8" stroke="#171717" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M105 177h511" fill="none" stroke="#171717" stroke-width="5" stroke-linecap="round"/>
+  <path d="M165 223h139v91H165zM380 223h139v91H380z" fill="none" stroke="#171717" stroke-width="4"/>
+  <path d="M185 250h99m-99 25h73m143-25h107m-107 25h76" fill="none" stroke="#b86650" stroke-width="5" stroke-linecap="round"/>
+  <path d="M98 100c53-24 104-29 155-13m-15-20 18 20-26 5" fill="none" stroke="#171717" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="105" y="390" fill="#171717" font-family="monospace" font-size="22" letter-spacing="3">SORT THE NOISE</text>
+</svg>

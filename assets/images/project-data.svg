@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480">
+  <title>Hand-drawn data analysis chart</title>
+  <rect width="720" height="480" fill="#f3f1eb"/>
+  <path d="M126 110v247h478M126 160h478M126 210h478M126 260h478M126 310h478" fill="none" stroke="#d7d3ca" stroke-width="3"/>
+  <path d="M171 317v-76h53v76m59 0v-131h53v131m59 0v-101h53v101m59 0v-172h53v172" fill="none" stroke="#171717" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M144 126c61-14 94 31 144-5 54-39 94 27 142-7 42-30 81 5 143-13m-20-22 22 22-29 8" fill="none" stroke="#b86650" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="126" y="410" fill="#171717" font-family="monospace" font-size="20" letter-spacing="3">LOOK / CLEAN / LEARN</text>
+</svg>

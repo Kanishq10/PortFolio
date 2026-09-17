@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480">
+  <title>Hand-drawn terminal for a browser automation project</title>
+  <rect width="720" height="480" fill="#f3f1eb"/>
+  <rect x="86" y="94" width="548" height="288" rx="4" fill="#fffdf8" stroke="#171717" stroke-width="5"/>
+  <path d="M87 143h546M118 119h1m24 0h1m24 0h1" stroke="#171717" stroke-width="5" stroke-linecap="round"/>
+  <path d="m142 199 31 28-31 28m59 0h74" fill="none" stroke="#171717" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M140 306c54-17 99-10 143 5 50 18 91 14 145-12m-13-20 15 20-24 6" fill="none" stroke="#b86650" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="113" y="421" fill="#171717" font-family="monospace" font-size="22" letter-spacing="3">RUN / REPEAT / LEARN</text>
+</svg>

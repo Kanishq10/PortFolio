@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480">
+  <title>Hand-drawn recipe cards for a search project</title>
+  <rect width="720" height="480" fill="#f3f1eb"/>
+  <path d="M108 116h502v260H108z" fill="#fffdf8" stroke="#171717" stroke-width="5"/>
+  <path d="M108 168h502M151 139h245" stroke="#171717" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="565" cy="137" r="13" fill="none" stroke="#171717" stroke-width="4"/>
+  <path d="m575 147 14 14" stroke="#171717" stroke-width="4" stroke-linecap="round"/>
+  <path d="M151 211h131v111H151zM319 211h131v111H319zM487 211h82v111h-82z" fill="none" stroke="#171717" stroke-width="4"/>
+  <path d="M171 242h91m-91 28h64m104-28h91m-91 28h52m118-28h42m-42 28h26" stroke="#b86650" stroke-width="5" stroke-linecap="round"/>
+  <text x="108" y="421" fill="#171717" font-family="monospace" font-size="22" letter-spacing="3">LOOKING FOR DINNER</text>
+</svg>

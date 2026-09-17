@@ -1,0 +1,340 @@
+:root {
+    --paper: #ffffff;
+    --ink: #111111;
+    --muted: #6f6f6f;
+    --line: #e4e4e4;
+    --accent: #111111;
+    --font-display: "Instrument Serif", Georgia, serif;
+    --font-body: "Space Grotesk", sans-serif;
+    --font-mono: "DM Mono", monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--paper);
+}
+
+body {
+    background-color: var(--paper);
+    background-image: none;
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.55;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+.resume-toolbar {
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem clamp(1.1rem, 6vw, 5.5rem);
+}
+
+.resume-brand {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.resume-brand span {
+    color: var(--accent);
+}
+
+.resume-toolbar nav {
+    align-items: center;
+    display: flex;
+    gap: 1.3rem;
+}
+
+.resume-toolbar a,
+.resume-toolbar button {
+    background: transparent;
+    border: 0;
+    font-family: var(--font-mono);
+    font-size: .65rem;
+    padding: 0;
+    text-decoration: none;
+}
+
+.resume-toolbar a:hover,
+.resume-toolbar button:hover {
+    color: var(--accent);
+}
+
+.resume-page {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: clamp(3rem, 8vw, 7rem) clamp(1.1rem, 6vw, 5.5rem) 4rem;
+}
+
+.resume-header {
+    align-items: end;
+    border-bottom: 1px solid var(--ink);
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: minmax(0, 1fr) 15rem;
+    padding-bottom: 2rem;
+}
+
+.resume-kicker,
+.resume-label,
+.resume-project-meta,
+.resume-footer {
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: .63rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.resume-kicker {
+    margin: 0 0 1rem;
+}
+
+.resume-header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: .8;
+    margin: 0 0 1.2rem;
+}
+
+.resume-role {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.resume-contact {
+    display: grid;
+    gap: .5rem;
+    justify-items: end;
+}
+
+.resume-contact a {
+    font-family: var(--font-mono);
+    font-size: .68rem;
+    text-align: right;
+    text-decoration: none;
+}
+
+.resume-contact a:hover,
+.resume-project a:hover {
+    color: var(--accent);
+}
+
+.resume-section {
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 10rem minmax(0, 1fr);
+    padding: 2.3rem 0;
+}
+
+.resume-label {
+    margin: .25rem 0 0;
+}
+
+.resume-profile > p:last-child,
+.resume-two-column p:last-child {
+    font-size: 1.05rem;
+    margin: 0;
+    max-width: 48rem;
+}
+
+.resume-skill-grid {
+    display: grid;
+    gap: 1.2rem 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.resume-skill-grid div:last-child {
+    grid-column: 1 / -1;
+}
+
+.resume-skill-grid h2,
+.resume-project h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0 0 .4rem;
+}
+
+.resume-skill-grid p {
+    color: var(--muted);
+    font-size: .85rem;
+    margin: 0;
+}
+
+.resume-project-list {
+    border-top: 1px solid var(--ink);
+}
+
+.resume-project {
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 12rem minmax(0, 1fr) auto;
+    padding: 1.1rem 0;
+}
+
+.resume-project h2 {
+    margin-bottom: .35rem;
+}
+
+.resume-project-meta {
+    font-size: .58rem;
+    margin: 0;
+}
+
+.resume-project > p {
+    color: var(--muted);
+    font-size: .83rem;
+    margin: 0;
+}
+
+.resume-project a {
+    font-family: var(--font-mono);
+    font-size: .62rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.resume-two-column {
+    grid-template-columns: 10rem repeat(2, minmax(0, 1fr));
+}
+
+.resume-two-column > div {
+    border-left: 1px solid var(--line);
+    padding-left: 1.2rem;
+}
+
+.resume-two-column p {
+    color: var(--muted);
+    font-size: .83rem;
+    margin: .25rem 0 0;
+}
+
+.resume-footer {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+}
+
+@media (max-width: 760px) {
+    .resume-toolbar nav {
+        gap: .8rem;
+    }
+
+    .resume-toolbar nav a {
+        display: none;
+    }
+
+    .resume-header,
+    .resume-section,
+    .resume-two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-header {
+        align-items: start;
+        gap: 2rem;
+    }
+
+    .resume-contact {
+        justify-items: start;
+    }
+
+    .resume-contact a {
+        text-align: left;
+    }
+
+    .resume-project {
+        grid-template-columns: 1fr;
+        gap: .6rem;
+    }
+
+    .resume-project a {
+        justify-self: start;
+    }
+
+    .resume-skill-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-skill-grid div:last-child {
+        grid-column: auto;
+    }
+
+    .resume-two-column > div {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding-left: 0;
+        padding-top: 1.2rem;
+    }
+
+    .resume-two-column > div:first-child {
+        border-top: 0;
+        padding-top: 0;
+    }
+
+    .resume-footer {
+        align-items: start;
+        flex-direction: column;
+    }
+}
+
+@media print {
+    @page {
+        margin: 14mm;
+        size: A4;
+    }
+
+    body {
+        background: #fff;
+    }
+
+    .resume-toolbar {
+        display: none;
+    }
+
+    .resume-page {
+        max-width: none;
+        padding: 0;
+    }
+
+    .resume-header h1 {
+        font-size: 4.8rem;
+    }
+
+    .resume-section {
+        break-inside: avoid;
+        padding: 1.35rem 0;
+    }
+
+    .resume-project {
+        break-inside: avoid;
+        padding: .75rem 0;
+    }
+}

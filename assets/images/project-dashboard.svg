@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480">
+  <title>Hand-drawn dashboard interface</title>
+  <rect width="720" height="480" fill="#f3f1eb"/>
+  <path d="M100 90h520v300H100z" fill="#fffdf8" stroke="#171717" stroke-width="5"/>
+  <path d="M100 145h520M133 117h1m24 0h1m24 0h1" stroke="#171717" stroke-width="5" stroke-linecap="round"/>
+  <path d="M146 197h115v128H146zM302 197h115v58H302zM302 281h115v44H302zM458 197h117v128H458z" fill="none" stroke="#171717" stroke-width="4"/>
+  <path d="M165 288c22-37 37-5 53-35 15-26 22 17 38-17m72-11h69m-69 22h44m95 22 18-24 17 11 21-29" fill="none" stroke="#b86650" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="128" y="370" fill="#171717" font-family="monospace" font-size="20" letter-spacing="3">MAKE THE DATA LEGIBLE</text>
+</svg>

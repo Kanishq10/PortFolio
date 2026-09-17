@@ -1,0 +1,1 @@
+- [ ] add links, resume and professional expierience

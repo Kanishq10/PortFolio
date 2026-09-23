@@ -109,17 +109,6 @@ const featuredProjects = [
         imageAlt: "A hand-drawn mobile screen for the World Time app"
     },
     {
-        title: "PyGame",
-        collection: "personal",
-        category: "Python Interactive Project",
-        description: "A Python interactive game project exploring game loops, keyboard input, and real-time graphics with Pygame.",
-        technologies: ["Python", "Pygame", "Game Loop", "Interactive Graphics"],
-        githubUrl: "https://github.com/Kanishq10/PyGame",
-        featured: true,
-        image: "assets/images/project-mobile.svg",
-        imageAlt: "A hand-drawn game screen for the PyGame project"
-    },
-    {
         title: "Car Sales Analysis",
         collection: "personal",
         category: "Tableau Data Visualization",

@@ -1,9 +1,9 @@
 const profile = {
-    email: "your.email@example.com",
+    email: "kanishq301@gmail.com",
     links: {
         linkedin: "https://www.linkedin.com/in/kanishq-sharma-9b49661bb/",
         github: "https://github.com/Kanishq10",
-        leetcode: ""
+        leetcode: "https://leetcode.com/u/kanishq301/"
     }
 };
 
@@ -48,6 +48,7 @@ const featuredProjects = [
         description: "A recipe-search web application that fetches meal data from a public API. Users can search by ingredient, view matching meals, open recipe instructions, and access related cooking videos.",
         technologies: ["JavaScript", "HTML", "CSS", "REST API", "TheMealDB API"],
         githubUrl: "https://github.com/Kanishq10/meal-search-api",
+        liveUrl: "https://clinquant-tanuki-a9b352.netlify.app/",
         featured: true,
         image: "assets/images/project-recipe-search.svg",
         imageAlt: "A hand-drawn recipe search interface for Meal Finder"
@@ -175,6 +176,9 @@ function renderProjectLinks(project) {
     const links = [];
     if (project.githubUrl) {
         links.push(`<a href="${project.githubUrl}" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a>`);
+    }
+    if (project.liveUrl) {
+        links.push(`<a href="${project.liveUrl}" target="_blank" rel="noreferrer">Live site <span aria-hidden="true">↗</span></a>`);
     }
     return links.length ? `<div class="project-links">${links.join("")}</div>` : '<span class="project-status">Personal build</span>';
 }

@@ -1,11 +1,11 @@
 :root {
-    --paper: #ffffff;
-    --ink: #111111;
-    --muted: #6f6f6f;
-    --line: #e4e4e4;
-    --accent: #111111;
+    --paper: #f5f8fa;
+    --ink: #17232c;
+    --muted: #64717a;
+    --line: #d1dde4;
+    --accent: #1d5f8c;
     --font-display: "Instrument Serif", Georgia, serif;
-    --font-body: "Space Grotesk", sans-serif;
+    --font-body: "Literata", Georgia, serif;
     --font-mono: "DM Mono", monospace;
 }
 
@@ -19,10 +19,12 @@ html {
 
 body {
     background-color: var(--paper);
-    background-image: none;
+    background-image: linear-gradient(rgba(29, 95, 140, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(29, 95, 140, .045) 1px, transparent 1px);
+    background-size: 2.2rem 2.2rem;
     color: var(--ink);
     font-family: var(--font-body);
-    line-height: 1.55;
+    letter-spacing: .012em;
+    line-height: 1.7;
     margin: 0;
 }
 

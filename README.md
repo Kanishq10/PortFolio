@@ -1,258 +1,117 @@
-# Kanishq Portfolio
+# Kanishq Sharma Portfolio
 
-A responsive personal portfolio for Kanishq Sharma, built as a zero-build static website with plain HTML, CSS, and JavaScript. The visual language is a white Notion-like notebook with text-led project rows, black SVG doodles, and restrained interactions.
+A responsive static portfolio for Kanishq Sharma, a Software Development Engineer. The site presents product builds, personal experiments, technical skills, a short working process, contact links, and a separate resume page.
 
-The homepage currently presents two project collections:
+## Design
 
-- **Product builds**: complete applications, utilities, API projects, and automation work.
-- **Personal lab**: data analysis, machine learning, mobile, game, visualization, and algorithm explorations.
+The interface follows an **engineer blueprint** visual language. It combines:
 
-Professional experience is kept separate from repository projects and should be added from the resume when the resume content is ready.
+- A pale drafting-grid background inspired by technical paper.
+- Graphite text and thin structural dividers.
+- Cobalt blue accents for annotations and system markers.
+- Editorial serif typography for readable project descriptions.
+- Monospace labels for categories, technologies, and metadata.
+- Hand-drawn SVG diagrams and small sketch annotations.
+- Generous horizontal measures and line spacing to avoid condensed text.
 
-## Features
+The design treats the portfolio as a working document rather than a conventional marketing landing page. Projects appear as entries in a notebook, while the surrounding sections explain capabilities, interests, and working habits.
 
-- Responsive homepage for desktop, tablet, and mobile screens.
-- Project notebook with filters for all work, product builds, and personal lab work.
-- GitHub links for each featured project.
-- Hover previews on larger screens and a simplified layout on mobile.
-- Mobile navigation menu with keyboard support.
-- Scroll-based reveal motion with reduced-motion support.
-- Standalone resume page at [resume.html](resume.html).
-- Browser print flow for saving the resume as a PDF.
-- No framework, package manager, build step, or server-side code required.
+## Pages
 
-## Technology
+### Homepage
 
-- Semantic HTML5
-- Modern CSS with responsive media queries
-- Vanilla JavaScript
-- SVG project illustrations
-- Google Fonts loaded from the page stylesheets
-- Browser APIs: `IntersectionObserver`, `matchMedia`, `requestAnimationFrame`, and `window.print`
+`index.html` contains the main portfolio experience:
 
-## Requirements
+- Hero introduction and navigation.
+- Filterable project notebook.
+- Technical capabilities grouped by discipline.
+- About section and current learning focus.
+- Three-part working process.
+- Contact and social links.
 
-You only need:
+### HTML Resume
 
-- A modern browser such as Chrome, Edge, Firefox, or Safari.
-- Python 3 for the simplest local server, or another static file server.
-- Git if you want to clone and publish the repository.
+`resume.html` is a browser-readable resume with its own layout and print stylesheet. It contains the profile, technical skills, selected projects, learning focus, and career direction.
 
-Node.js and `npm` are not required for this portfolio.
+### PDF Resume
+
+`resume.pdf` is the supplied PDF resume linked from the homepage and HTML resume toolbar. It is kept at the repository root so static hosting can serve it directly.
 
 ## Project Structure
 
 ```text
 PortFolio/
-|- index.html                    # Homepage content and semantic sections
-|- style.css                     # Homepage layout, responsive rules, and visual system
-|- resume.html                   # Editable resume page
-|- resume.css                    # Resume screen and print styles
-|- README.md                     # Project and deployment documentation
-|- scripts/
-|  `- main.js                    # Project data, profile links, and interactions
-|- assets/
-|  |- images/                    # Project preview SVGs
-|  `- icons/                     # Optional local icons and favicon files
-`- projects/                     # Optional space for future project material
+|- index.html          # Portfolio homepage
+|- style.css           # Homepage layout and design system
+|- resume.html         # HTML resume
+|- resume.css          # Resume screen and print styles
+|- resume.pdf          # PDF resume shown from the site
+|- scripts/main.js     # Project data and interactions
+|- assets/images/      # Project preview illustrations
+|- assets/icons/       # Optional icons
+|- projects/           # Optional future project material
+`- README.md           # Project documentation
 ```
 
 ## Run Locally
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/Kanishq10/PortFolio.git
-cd PortFolio
-```
-
-If the repository is already open in VS Code, start from the workspace root instead.
-
-### 2. Start a local static server
+From the repository root:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-### 3. Open the site
-
-Visit:
+Open:
 
 ```text
 http://localhost:8000/
-```
-
-The resume is available at:
-
-```text
 http://localhost:8000/resume.html
 ```
 
-Stop the server with `Ctrl+C` in the terminal. Serving the folder over HTTP is preferred to opening `index.html` directly because it matches how the site will behave when hosted.
+Stop the server with `Ctrl+C`.
 
-## Update Profile Links
+## Implementation
 
-The homepage profile configuration is at the top of [scripts/main.js](scripts/main.js):
+The project uses plain HTML, CSS, JavaScript, and SVG:
 
-```js
-const profile = {
-    email: "your.email@example.com",
-    links: {
-        linkedin: "https://www.linkedin.com/in/your-profile/",
-        github: "https://github.com/your-account",
-        leetcode: ""
-    }
-};
-```
+- `index.html` provides the semantic homepage structure.
+- `style.css` defines the blueprint grid, typography, responsive layout, visual states, and motion.
+- `resume.html` and `resume.css` provide the browser-readable and printable resume.
+- `scripts/main.js` stores project data and controls rendering, filters, navigation, reveal animation, profile links, and printing.
+- `assets/images/` contains lightweight hand-drawn SVG project previews.
 
-Update the email, LinkedIn URL, GitHub URL, and optional LeetCode URL. An empty social URL is rendered as unavailable instead of creating a broken link.
+There is no framework, package manager, build pipeline, database, or server-side application.
 
-The contact details at the top of [resume.html](resume.html) are written directly in that file, so update those values there as well. Search for `your.email@example.com` before publishing.
+## Project Data
 
-## Add or Edit Projects
+The `featuredProjects` array in `scripts/main.js` is the source of truth for the project notebook. Each entry contains a title, collection, category, description, technology list, repository URL, optional live URL, preview image, and accessibility text.
 
-Project rows are generated from the `featuredProjects` array in [scripts/main.js](scripts/main.js). A project is displayed only when `featured: true`.
+The `collection` value separates product builds from personal experiments. The filter controls use this value to update the visible project rows and their accessible pressed states.
 
-```js
-{
-    title: "Project Name",
-    collection: "build",
-    category: "Short project category",
-    description: "Describe the useful problem the project solves.",
-    technologies: ["JavaScript", "Node.js"],
-    githubUrl: "https://github.com/your-account/your-project",
-    featured: true,
-    image: "assets/images/project-name.svg",
-    imageAlt: "A short description of the project preview"
-}
-```
+## Interaction and Accessibility
 
-### Project fields
+The homepage uses progressive enhancement for project rendering, collection filtering, mobile navigation, active section navigation, pointer labels, and scroll-based reveals. `prefers-reduced-motion` is respected so decorative movement can be reduced. Navigation controls expose semantic labels and state attributes, while project preview images include alternative text.
 
-| Field | Purpose |
-| --- | --- |
-| `title` | Visible project name. |
-| `collection` | Use `build` for product-minded work or `personal` for explorations. |
-| `category` | Short label shown on the right side of a project row. |
-| `description` | Honest one- or two-sentence explanation of what the project does. |
-| `technologies` | Array of technology labels shown below the description. |
-| `githubUrl` | Public repository URL. Leave empty if it is not ready. |
-| `featured` | Set to `false` to keep a project in the data file but hide it from the homepage. |
-| `image` | Relative path to a preview image or SVG under `assets/images/`. |
-| `imageAlt` | Accessible description for the preview image. |
+## Responsive Layout
 
-When adding a new preview, keep the path relative, for example `assets/images/my-project.svg`. Do not use a leading slash because the site is also hosted under the `/PortFolio/` path on GitHub Pages.
+Wide layouts use the blueprint composition with project metadata columns and supporting diagrams. Medium layouts simplify previews and hero composition. Small layouts collapse navigation, project details, capability groups, and contact content into a single readable column. Relative asset paths allow the same files to work at the repository root and under the GitHub Pages `/PortFolio/` path.
 
-Keep descriptions accurate. Forks, tutorials, company-branded demos, and learning experiments should not be presented as original professional work.
+## Local Reference
 
-## Update Homepage Copy and Styling
-
-- Edit headings, biography, navigation labels, and contact copy in [index.html](index.html).
-- Edit colors, spacing, typography, doodles, hover states, and responsive behavior in [style.css](style.css).
-- Keep the project list in `scripts/main.js`; the HTML only provides the `#project-list` mount point.
-- Keep company experience separate from the GitHub project array. Add it from verified resume information rather than inferring it from repository names.
-
-## Resume Workflow
-
-The resume is an editable HTML document, not a generated PDF:
-
-1. Edit [resume.html](resume.html) for profile, skills, experience, and selected projects.
-2. Edit [resume.css](resume.css) for screen and print layout changes.
-3. Open `http://localhost:8000/resume.html`.
-4. Select **Print / save as PDF**.
-5. In the browser print dialog, choose **Save as PDF** and keep background graphics enabled if you want the complete visual treatment.
-
-The toolbar is automatically hidden in print output, and the print stylesheet avoids splitting project entries where possible.
-
-## Free Hosting
-
-### Option 1: GitHub Pages (recommended)
-
-GitHub Pages is free for this static portfolio and works directly from the existing repository.
-
-1. Commit and push the site to GitHub:
-
-   ```bash
-   git add .
-   git commit -m "Update portfolio"
-   git push origin main
-   ```
-
-2. Open the repository settings: [GitHub Pages settings](https://github.com/Kanishq10/PortFolio/settings/pages).
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select branch `main` and folder `/ (root)`.
-5. Select **Save**.
-6. Wait for the Pages deployment to finish. GitHub will show the public URL in the same settings panel.
-
-The expected project-site URL is:
-
-```text
-https://kanishq10.github.io/PortFolio/
-```
-
-The first deployment may take a few minutes. Every later push to `main` triggers a new deployment automatically.
-
-### Option 2: Netlify (free)
-
-Netlify can deploy the same repository without a build step:
-
-1. Open [Netlify](https://app.netlify.com/).
-2. Choose **Add new project** and **Import an existing project**.
-3. Connect GitHub and select `Kanishq10/PortFolio`.
-4. Leave **Build command** empty.
-5. Set **Publish directory** to `.` or the repository root.
-6. Deploy the site.
-
-Netlify provides a free `*.netlify.app` URL and redeploys when the connected GitHub branch changes.
-
-### Option 3: Cloudflare Pages (free)
-
-Cloudflare Pages also works for this zero-build site:
-
-1. Open [Cloudflare Pages](https://pages.cloudflare.com/).
-2. Create a project from the GitHub repository.
-3. Select the `main` branch.
-4. Leave the build command empty.
-5. Use the repository root as the output directory.
-6. Deploy and use the free `*.pages.dev` URL.
-
-For all hosts, keep `index.html` at the repository root and preserve relative asset paths.
-
-## Updating the Hosted Site
-
-After changing files locally:
+The site can be served locally with:
 
 ```bash
-git status
-git add index.html style.css scripts/main.js resume.html resume.css README.md assets/
-git commit -m "Refresh portfolio"
-git push origin main
+python3 -m http.server 8000
 ```
 
-GitHub Pages, Netlify, and Cloudflare Pages will deploy the pushed changes automatically when connected to `main`.
+Homepage: `http://localhost:8000/`
 
-## Validation Checklist
+Resume: `http://localhost:8000/resume.html`
 
-Run the quick static checks before publishing:
+## Deployment Context
 
-```bash
-node --check scripts/main.js
+The project is suitable for GitHub Pages as a static site published from the `main` branch and repository root.
 
-```
+Portfolio URL: `https://kanishq10.github.io/PortFolio/`
 
-Then verify in a browser:
-
-- Homepage loads at `/`.
-- The project filters show All work, Product builds, and Personal lab correctly.
-- GitHub links open the intended repositories.
-- The mobile menu opens and closes.
-- The layout has no horizontal scrolling on a narrow screen.
-- The resume opens at `/resume.html`.
-- Print / save as PDF opens the browser print dialog.
-- The email and social URLs are real values rather than placeholders.
-
-## Security Notes
-
-- Never commit passwords, API keys, cookies, session tokens, or personal access tokens.
-- Do not publish a project that contains exposed credentials until the credentials are revoked and removed from Git history.
-- Keep public portfolio descriptions limited to work you can accurately explain.
+PDF resume URL: `https://kanishq10.github.io/PortFolio/resume.pdf`

@@ -1,14 +1,14 @@
 :root {
-    --paper: #ffffff;
-    --paper-deep: #f7f7f7;
-    --ink: #111111;
-    --muted: #6f6f6f;
-    --line: #e4e4e4;
-    --accent: #111111;
-    --accent-soft: #f0f0f0;
-    --white: #ffffff;
+    --paper: #f5f8fa;
+    --paper-deep: #e8eff3;
+    --ink: #17232c;
+    --muted: #64717a;
+    --line: #d1dde4;
+    --accent: #1d5f8c;
+    --accent-soft: #dceaf2;
+    --white: #fcfeff;
     --font-display: "Instrument Serif", Georgia, serif;
-    --font-body: "Space Grotesk", sans-serif;
+    --font-body: "Literata", Georgia, serif;
     --font-mono: "DM Mono", monospace;
     --font-hand: "Caveat", cursive;
 }
@@ -24,11 +24,13 @@ html {
 
 body {
     background-color: var(--paper);
-    background-image: none;
+    background-image: linear-gradient(rgba(29, 95, 140, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(29, 95, 140, .045) 1px, transparent 1px);
+    background-size: 2.2rem 2.2rem;
     color: var(--ink);
     font-family: var(--font-body);
-    font-size: .96rem;
-    line-height: 1.65;
+    font-size: 1rem;
+    letter-spacing: .012em;
+    line-height: 1.85;
     margin: 0;
     min-width: 320px;
     overflow-x: hidden;
@@ -90,7 +92,7 @@ button {
 
 .site-header {
     align-items: center;
-    background: rgba(255, 255, 255, .96);
+    background: rgba(245, 248, 250, .96);
     border-bottom: 1px solid var(--line);
     display: flex;
     height: 4.7rem;
@@ -263,6 +265,16 @@ button {
     text-transform: uppercase;
 }
 
+.eyebrow::before,
+.section-kicker::before,
+.project-type::before,
+.project-status::before,
+.contact-resume::before {
+    color: var(--accent);
+    content: "+";
+    margin-right: .45rem;
+}
+
 .eyebrow {
     align-items: center;
     display: flex;
@@ -307,9 +319,9 @@ h3 {
 
 .hero-subtitle {
     font-size: clamp(1.1rem, 2vw, 1.35rem);
-    line-height: 1.4;
+    line-height: 1.65;
     margin-bottom: 1.75rem;
-    max-width: 34rem;
+    max-width: 40rem;
 }
 
 .hero-links {
@@ -423,13 +435,19 @@ h3 {
     margin: .35rem 0 0;
 }
 
+.section-kicker::before {
+    font-family: var(--font-body);
+    font-size: .9rem;
+    line-height: 1;
+}
+
 .section-kicker span,
 .approach-number {
     color: var(--accent);
 }
 
 .section-intro-copy {
-    max-width: 45rem;
+    max-width: 52rem;
 }
 
 h2 {
@@ -448,8 +466,9 @@ h2 {
 }
 
 .section-intro-copy p {
-    font-size: .98rem;
-    max-width: 30rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 38rem;
 }
 
 .section-doodle {
@@ -468,7 +487,7 @@ h2 {
 }
 
 .project-list {
-    border-top: 1px solid var(--ink);
+    border-top: 1px solid var(--accent);
 }
 
 .work-controls {
@@ -572,13 +591,19 @@ h2 {
 
 .project-title-group p {
     color: var(--muted);
-    font-size: .86rem;
+    font-size: .92rem;
+    line-height: 1.75;
     margin: 0;
-    max-width: 39rem;
+    max-width: 48rem;
 }
 
 .project-type {
     text-align: right;
+}
+
+.project-type::before,
+.project-status::before {
+    font-family: var(--font-body);
 }
 
 .project-arrow {
@@ -716,12 +741,12 @@ h2 {
 }
 
 .about-copy {
-    font-size: 1rem;
-    max-width: 36rem;
+    font-size: 1.04rem;
+    max-width: 42rem;
 }
 
 .about-copy p + p {
-    margin-top: 1.2rem;
+    margin-top: 1.45rem;
 }
 
 .about-copy .text-link {
@@ -788,9 +813,10 @@ h2 {
 }
 
 .approach-item p {
-    font-size: .82rem;
+    font-size: .9rem;
+    line-height: 1.7;
     margin: 0;
-    max-width: 35rem;
+    max-width: 42rem;
 }
 
 .approach-mark {
@@ -814,7 +840,7 @@ h2 {
 }
 
 .contact-copy > p:last-child {
-    max-width: 28rem;
+    max-width: 34rem;
 }
 
 .contact-actions {
@@ -984,7 +1010,7 @@ h2 {
 }
 
 .capability-grid {
-    border-top: 1px solid var(--ink);
+    border-top: 1px solid var(--accent);
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -1029,7 +1055,7 @@ h2 {
 
 .capability-list li {
     color: var(--muted);
-    font-size: .78rem;
+    font-size: .84rem;
 }
 
 .capability-list li::before {

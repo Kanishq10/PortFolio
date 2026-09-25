@@ -15,6 +15,7 @@ const featuredProjects = [
         description: "A responsive home-chef booking platform with service pages for monthly cooking, one-time bookings, party chefs, cook onboarding, and customer contact flows. Built with a structured React architecture and polished, motion-based user interactions.",
         technologies: ["React", "TypeScript", "React Router", "Tailwind CSS", "Framer Motion", "Vite", "Docker"],
         githubUrl: "https://github.com/Kanishq10/Toque_chef_hire",
+        liveUrl: "https://toque-chef.vercel.app/",
         featured: true,
         image: "assets/images/project-toque.svg",
         imageAlt: "A hand-drawn chef service interface for Toque"

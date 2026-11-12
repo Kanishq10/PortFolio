@@ -5,7 +5,7 @@
     --line: #d1dde4;
     --accent: #1d5f8c;
     --font-display: "Instrument Serif", Georgia, serif;
-    --font-body: "Literata", Georgia, serif;
+    --font-body: "Nunito", sans-serif;
     --font-mono: "DM Mono", monospace;
 }
 
@@ -23,6 +23,8 @@ body {
     background-size: 2.2rem 2.2rem;
     color: var(--ink);
     font-family: var(--font-body);
+    font-size: 1.02rem;
+    font-weight: 500;
     letter-spacing: .012em;
     line-height: 1.7;
     margin: 0;
@@ -114,16 +116,17 @@ button {
 }
 
 .resume-header h1 {
-    font-family: var(--font-display);
-    font-size: clamp(4rem, 10vw, 8rem);
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: .8;
+    font-family: var(--font-body);
+    font-size: clamp(3.2rem, 8vw, 6.8rem);
+    font-weight: 800;
+    letter-spacing: -.055em;
+    line-height: .95;
     margin: 0 0 1.2rem;
 }
 
 .resume-role {
     font-size: 1.1rem;
+    font-weight: 700;
     margin: 0;
 }
 

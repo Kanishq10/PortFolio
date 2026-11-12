@@ -9,10 +9,10 @@ The interface follows an **engineer blueprint** visual language. It combines:
 - A pale drafting-grid background inspired by technical paper.
 - Graphite text and thin structural dividers.
 - Cobalt blue accents for annotations and system markers.
-- Editorial serif typography for readable project descriptions.
+- Rounded, readable Nunito body text and bold name display, paired with editorial serif section headlines.
 - Monospace labels for categories, technologies, and metadata.
 - Hand-drawn SVG diagrams and small sketch annotations.
-- A connected software-layer map and process timeline with restrained CSS-only motion.
+- A labeled problem-to-product build diagram, software-layer map, and process timeline with restrained CSS-only motion.
 - Generous horizontal measures and line spacing to avoid condensed text.
 
 ## Pages

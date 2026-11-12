@@ -8,7 +8,7 @@
     --accent-soft: #dceaf2;
     --white: #fcfeff;
     --font-display: "Instrument Serif", Georgia, serif;
-    --font-body: "Literata", Georgia, serif;
+    --font-body: "Nunito", sans-serif;
     --font-mono: "DM Mono", monospace;
     --font-hand: "Caveat", cursive;
 }
@@ -28,9 +28,10 @@ body {
     background-size: 2.2rem 2.2rem;
     color: var(--ink);
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 1.02rem;
+    font-weight: 500;
     letter-spacing: .012em;
-    line-height: 1.85;
+    line-height: 1.75;
     margin: 0;
     min-width: 320px;
     overflow-x: hidden;
@@ -304,21 +305,22 @@ h3 {
 }
 
 .hero-name {
-    font-family: var(--font-display);
-    font-size: clamp(5rem, 12vw, 10rem);
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: .8;
-    margin: 0 0 2rem;
+    font-family: var(--font-body);
+    font-size: clamp(4.5rem, 10vw, 8.5rem);
+    font-weight: 800;
+    letter-spacing: -.055em;
+    line-height: .9;
+    margin: 0 0 1.75rem;
 }
 
 .hero-name em {
     color: var(--accent);
-    font-style: italic;
+    font-style: normal;
 }
 
 .hero-subtitle {
     font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-weight: 600;
     line-height: 1.65;
     margin-bottom: 1.75rem;
     max-width: 40rem;
@@ -363,35 +365,155 @@ h3 {
 .hero-visual {
     align-self: center;
     justify-self: center;
-    max-width: 35rem;
+    max-width: 38rem;
     width: 100%;
 }
 
-.hero-sketch {
-    overflow: visible;
-    transform: rotate(-2deg);
-    width: 100%;
+.build-diagram {
+    background-color: var(--white);
+    background-image: linear-gradient(rgba(29, 95, 140, .04) 1px, transparent 1px), linear-gradient(90deg, rgba(29, 95, 140, .04) 1px, transparent 1px);
+    background-size: 1.25rem 1.25rem;
+    border: 1px solid var(--line);
+    box-shadow: .4rem .45rem 0 var(--accent-soft);
+    padding: clamp(1.1rem, 3vw, 1.75rem);
 }
 
-.draw-path {
+.build-diagram-header {
+    align-items: start;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+}
+
+.diagram-kicker,
+.diagram-index,
+.diagram-footer {
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: .58rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.diagram-kicker {
+    color: var(--accent);
+    margin: 0 0 .45rem;
+}
+
+.build-diagram-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 0;
+}
+
+.diagram-status {
+    border: 1px solid var(--line);
+    color: var(--accent);
+    flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: .55rem;
+    letter-spacing: .04em;
+    line-height: 1;
+    padding: .4rem .5rem;
+}
+
+.diagram-steps {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.diagram-step {
+    background: rgba(252, 254, 255, .94);
+    border: 1px solid var(--line);
+    min-width: 0;
+    opacity: 0;
+    padding: 1rem;
+    position: relative;
+    transform: translateY(7px);
+    transition: background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+}
+
+.diagram-step:not(:last-child)::after {
+    color: var(--accent);
+    content: "→";
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    font-weight: 800;
+    position: absolute;
+    right: -1.05rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.diagram-step--three {
+    background: rgba(220, 234, 242, .56);
+    border-color: rgba(29, 95, 140, .42);
+}
+
+.diagram-step--one {
+    animation: diagram-step-in 480ms ease .35s both;
+}
+
+.diagram-step--two {
+    animation: diagram-step-in 480ms ease .52s both;
+}
+
+.diagram-step--three {
+    animation: diagram-step-in 480ms ease .69s both;
+}
+
+.diagram-step:hover {
+    border-color: var(--accent);
+    box-shadow: .2rem .2rem 0 var(--accent-soft);
+}
+
+.diagram-index {
+    display: block;
+    font-size: .52rem;
+    margin-bottom: .85rem;
+}
+
+.diagram-icon {
     fill: none;
-    stroke: var(--ink);
-    stroke-dasharray: 650;
-    stroke-dashoffset: 650;
+    height: 2.3rem;
+    margin-bottom: .75rem;
+    stroke: var(--accent);
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-width: 2.1;
+    stroke-width: 1.8;
+    width: 2.3rem;
 }
 
-.hero-sketch .draw-path {
-    animation: sketch-draw 1.2s cubic-bezier(.65, 0, .35, 1) .25s forwards;
+.diagram-step h3 {
+    font-family: var(--font-body);
+    font-size: 1.08rem;
+    font-weight: 800;
+    line-height: 1.05;
+    margin: 0;
 }
 
-.sketch-label {
-    fill: var(--accent);
-    font-family: var(--font-hand);
-    font-size: 20px;
-    transform: rotate(-5deg);
+.diagram-step p {
+    color: var(--muted);
+    font-size: .72rem;
+    line-height: 1.4;
+    margin: .45rem 0 0;
+}
+
+.diagram-footer {
+    border-top: 1px solid var(--line);
+    margin: 1rem 0 0;
+    padding-top: .75rem;
+    text-align: center;
 }
 
 .hero-note {
@@ -1234,9 +1356,10 @@ h2 {
     }
 }
 
-@keyframes sketch-draw {
+@keyframes diagram-step-in {
     to {
-        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -1281,7 +1404,7 @@ h2 {
     }
 
     .hero-name {
-        font-size: clamp(4.8rem, 20vw, 8rem);
+        font-size: clamp(4rem, 18vw, 7rem);
     }
 
     .hero-note {
@@ -1407,14 +1530,26 @@ h2 {
     }
 
     .hero-name {
-        font-size: clamp(4.2rem, 19vw, 6.5rem);
-        margin-bottom: 1.6rem;
+        font-size: clamp(3.5rem, 18vw, 5.4rem);
+        margin-bottom: 1.5rem;
     }
 
     .hero-links {
         align-items: flex-start;
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .diagram-steps {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .diagram-step:not(:last-child)::after {
+        bottom: -1.35rem;
+        right: 50%;
+        top: auto;
+        transform: translateX(50%) rotate(90deg);
     }
 
     .stack-map {
@@ -1482,13 +1617,14 @@ h2 {
         transition-duration: .01ms !important;
     }
 
-    .draw-path {
-        animation: none !important;
-        stroke-dashoffset: 0;
-    }
-
     .intro-reveal,
     .reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+    .diagram-step {
+        animation-delay: 0s !important;
         opacity: 1;
         transform: none;
     }

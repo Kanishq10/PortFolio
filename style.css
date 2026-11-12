@@ -486,6 +486,118 @@ h2 {
     width: 6rem;
 }
 
+.stack-map {
+    margin: -1.5rem 0 clamp(3rem, 6vw, 5rem);
+}
+
+.stack-map-heading {
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: .64rem;
+    letter-spacing: .04em;
+    margin: 0 0 .85rem;
+    text-transform: uppercase;
+}
+
+.stack-map-track {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.stack-map-track::before {
+    background: var(--line);
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 1.45rem;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 700ms ease 120ms;
+}
+
+.stack-map.is-visible .stack-map-track::before {
+    transform: scaleX(1);
+}
+
+.stack-map-node {
+    background: rgba(252, 254, 255, .78);
+    border: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    min-width: 0;
+    opacity: 0;
+    padding: 2.7rem 1rem 1rem;
+    position: relative;
+    transform: translateY(6px);
+    transition: border-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+}
+
+.stack-map-node::before {
+    background: var(--paper);
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    content: "";
+    height: .65rem;
+    left: 1rem;
+    position: absolute;
+    top: 1.15rem;
+    transition: background-color 200ms ease, transform 200ms ease;
+    width: .65rem;
+}
+
+.stack-map.is-visible .stack-map-node {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 420ms ease, transform 420ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.stack-map.is-visible .stack-map-node:nth-child(2) {
+    transition-delay: 80ms;
+}
+
+.stack-map.is-visible .stack-map-node:nth-child(3) {
+    transition-delay: 160ms;
+}
+
+.stack-map.is-visible .stack-map-node:nth-child(4) {
+    transition-delay: 240ms;
+}
+
+.stack-map.is-visible .stack-map-node:hover {
+    border-color: var(--accent);
+    box-shadow: .2rem .2rem 0 var(--accent-soft);
+    transform: translateY(-2px);
+}
+
+.stack-map-index {
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: .58rem;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+}
+
+.stack-map-node strong {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.stack-map-detail {
+    color: var(--muted);
+    font-size: .75rem;
+    line-height: 1.5;
+}
+
 .project-list {
     border-top: 1px solid var(--accent);
 }
@@ -789,6 +901,16 @@ h2 {
     list-style: none;
     margin: 0 0 0 35%;
     padding: 0;
+    position: relative;
+}
+
+.approach-list::before {
+    border-left: 1px dashed var(--line);
+    bottom: 1.5rem;
+    content: "";
+    left: 1rem;
+    position: absolute;
+    top: 2rem;
 }
 
 .approach-item {
@@ -801,9 +923,26 @@ h2 {
 }
 
 .approach-number {
+    align-items: center;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    display: flex;
     font-family: var(--font-mono);
-    font-size: .66rem;
-    padding-top: .2rem;
+    font-size: .58rem;
+    height: 2rem;
+    justify-content: center;
+    padding-top: 0;
+    position: relative;
+    transition: background-color 220ms ease, border-color 220ms ease, color 220ms ease, transform 220ms ease;
+    width: 2rem;
+}
+
+.approach-item:hover .approach-number,
+.approach-item:focus-within .approach-number {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    transform: scale(1.06);
 }
 
 .approach-item h3 {
@@ -826,6 +965,21 @@ h2 {
     line-height: 1;
     text-align: right;
     transform: rotate(-8deg);
+    transition: transform 220ms ease;
+}
+
+.approach-item:hover .approach-mark,
+.approach-item:focus-within .approach-mark {
+    transform: rotate(4deg) translateX(2px);
+}
+
+.capability-group {
+    transition: background-color 220ms ease, transform 220ms ease;
+}
+
+.capability-group:hover {
+    background: rgba(220, 234, 242, .24);
+    transform: translateY(-2px);
 }
 
 .contact-section {
@@ -988,6 +1142,10 @@ h2 {
     transform: translateY(0);
 }
 
+.capability-group.reveal.is-visible:hover {
+    transform: translateY(-2px);
+}
+
 .project-row.reveal:hover,
 .project-row.reveal:focus-within {
     transform: translateX(6px);
@@ -1143,6 +1301,27 @@ h2 {
         margin-top: -.5rem;
     }
 
+    .stack-map {
+        margin-top: -1rem;
+    }
+
+    .stack-map-track {
+        gap: .65rem;
+    }
+
+    .stack-map-node {
+        padding-left: .75rem;
+        padding-right: .75rem;
+    }
+
+    .stack-map-index {
+        font-size: .53rem;
+    }
+
+    .stack-map-node strong {
+        font-size: 1.2rem;
+    }
+
     .about-grid,
     .approach-list {
         margin-left: 0;
@@ -1150,6 +1329,22 @@ h2 {
 
     .capability-grid {
         grid-template-columns: 1fr;
+    }
+
+    .stack-map-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stack-map-track::before {
+        display: none;
+    }
+
+    .stack-map-node {
+        padding-top: 2.4rem;
+    }
+
+    .stack-map-node::before {
+        top: .9rem;
     }
 
     .capability-group,
@@ -1222,6 +1417,10 @@ h2 {
         gap: 1rem;
     }
 
+    .stack-map {
+        margin-bottom: 3rem;
+    }
+
     h2 {
         font-size: clamp(2.6rem, 13vw, 4rem);
     }
@@ -1250,6 +1449,10 @@ h2 {
     .approach-item {
         gap: .7rem;
         grid-template-columns: 2.5rem minmax(0, 1fr) 1rem;
+    }
+
+    .approach-list::before {
+        left: .85rem;
     }
 
     .site-footer {

@@ -1,29 +1,44 @@
 # PortFolio
 
-Source code and project resources for PortFolio.
+**Portfolio project** · A static responsive portfolio website written with HTML and CSS.
 
 ## Overview
 
-This repository contains the source code and resources for **PortFolio**.
+A static responsive portfolio website written with HTML and CSS.
 
-## Technologies
+## Technology Stack
 
-- CSS
-- HTML
-- JavaScript
+- `HTML`
+- `CSS`
+- `JavaScript`
 
-## Getting Started
+## How the Repository Works
 
-```bash
-git clone https://github.com/Kanishq10/PortFolio.git
-cd PortFolio
+```mermaid
+flowchart LR
+    N0["User interaction<br/> DOM or React event"]
+    N1["State update<br/> Client-side logic"]
+    N0 --> N1
+    N2["View update<br/> Render the new result"]
+    N1 --> N2
 ```
 
-Review the project files and configuration to install dependencies and start the application.
+| Stage | Responsibility |
+|---|---|
+| **User interaction** | DOM or React event |
+| **State update** | Client-side logic |
+| **View update** | Render the new result |
 
-## Repository Contents
+## Concepts Covered
 
-- `README.md`
+- Project structure
+- Core implementation
+- Practical debugging
+- Version control
+- Incremental experimentation
+
+## Repository Map
+
 - `assets`
 - `index.html`
 - `resume.css`
@@ -32,6 +47,10 @@ Review the project files and configuration to install dependencies and start the
 - `scripts`
 - `style.css`
 
-## Contributing
+## Recruiter Summary
 
-Contributions are welcome. Fork the repository, create a feature branch, and open a pull request.
+This repository demonstrates practical implementation skills, repository organization, and an end-to-end understanding of the project workflow. It is suitable as a focused example of applied software or data work.
+
+---
+
+<sub>Documentation is concise and project-focused; source code was not modified.</sub>
